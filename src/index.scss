@@ -21,6 +21,7 @@ code {
 }
 
 .btn {
+  width: 31.5px;
   line-height: 10px;
   padding: 10px;
   font-size: 14px;
@@ -37,6 +38,10 @@ code {
 
   &:focus {
     box-shadow: none;
+  }
+
+  &.--zero {
+    font-size: 0;
   }
 }
 
@@ -57,5 +62,13 @@ code {
     display: flex;
     justify-content: center;
     width: 33.33%;
+  }
+
+  &__clipboard {
+    position: absolute;
+    background: #09869e;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
