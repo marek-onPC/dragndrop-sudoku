@@ -18,8 +18,8 @@ export default function Clipboard() {
   return (
     <div className="board__clipboard d-flex align-content-center justify-content-center">
       {
-        clipboard.map((clipboardNumber) => 
-          <Number position={ clipboardNumber.id } value={ clipboardNumber.value }/>
+        clipboard.map((clipboardNumber, index) => 
+          <Number position={ clipboardNumber.id } value={ clipboardNumber.value } key={ index }/>
         )
       }
     </div>

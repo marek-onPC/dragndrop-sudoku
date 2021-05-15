@@ -49,11 +49,11 @@ export default class Board extends PureComponent {
     return (
       <div className="board__layout d-flex flex-wrap">
         {
-          this.state.boardLayout.map((boardSection) =>
-          <div className="board__section d-flex flex-wrap align-content-center justify-content-center">
+          this.state.boardLayout.map((boardSection, index) =>
+          <div className="board__section d-flex flex-wrap align-content-center justify-content-center" key={ index }>
             { boardSection.map((boardRow) =>
-              boardRow.map((boardNumber) =>
-                <Number position={ boardNumber.id } value={ boardNumber.value }/>
+              boardRow.map((boardNumber, index) =>
+                <Number position={ boardNumber.id } value={ boardNumber.value } key={ index }/>
               )
               )}
           </div>
