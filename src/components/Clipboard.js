@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState, useEffect }  from 'react'
 import Number from '../components/Number'
 
 export default function Clipboard() {
@@ -15,11 +15,21 @@ export default function Clipboard() {
     { id: 'clip9', value: 9 },
   ])
 
+  useEffect(() => {
+    const draggableNumbers = document.querySelectorAll('p[draggable="true"]')
+    
+    draggableNumbers.forEach(draggableNumber => {
+      draggableNumber.addEventListener('dragstart', (event) => {
+        event.dataTransfer.setData('text/plain', draggableNumber.innerHTML)
+      });
+    });
+  });
+
   return (
     <div className="board__clipboard d-flex align-content-center justify-content-center">
       {
         clipboard.map((clipboardNumber, index) => 
-          <Number position={ clipboardNumber.id } value={ clipboardNumber.value } key={ index }/>
+          <Number position={ clipboardNumber.id } value={ clipboardNumber.value } key={ index } draggable="true"/>
         )
       }
     </div>

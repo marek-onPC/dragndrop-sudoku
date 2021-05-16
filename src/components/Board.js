@@ -45,6 +45,39 @@ export default class Board extends PureComponent {
     }
   }
 
+  componentDidMount() {
+    const dropZones = document.querySelectorAll('p[draggable="false"]')
+
+    dropZones.forEach(dropZone => {
+      dropZone.addEventListener('dragover', (event) => {
+        event.preventDefault();
+
+        dropZone.classList.add('--dragover')
+      });
+
+      dropZone.addEventListener('dragleave', (event) => {
+        event.preventDefault();
+
+        dropZone.classList.remove('--dragover')
+      });
+
+      dropZone.addEventListener('drop', (event) => {
+        event.preventDefault();
+
+        dropZone.innerHTML = event.dataTransfer.getData('text/plain');
+
+        if (event.dataTransfer.getData('text/plain') == 0) {
+          dropZone.classList.add('--zero', 'btn-outline-warning');
+          dropZone.classList.remove('btn-warning');
+        } else {
+          dropZone.classList.remove('--zero', 'btn-outline-warning');
+          dropZone.classList.add('btn-warning');
+        }
+        dropZone.classList.remove('--dragover')
+      });
+    });
+  };
+
   render() {
     return (
       <div className="board__layout d-flex flex-wrap">
@@ -53,7 +86,7 @@ export default class Board extends PureComponent {
           <div className="board__section d-flex flex-wrap align-content-center justify-content-center" key={ index }>
             { boardSection.map((boardRow) =>
               boardRow.map((boardNumber, index) =>
-                <Number position={ boardNumber.id } value={ boardNumber.value } key={ index }/>
+                <Number position={ boardNumber.id } value={ boardNumber.value } key={ index } draggable="false"/>
               )
               )}
           </div>
