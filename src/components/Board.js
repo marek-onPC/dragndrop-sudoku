@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import Number from '../components/Number'
 import sudokuSets from '../modules/sudokuSets'
+import updateSet from '../modules/updateSet'
+import rulesChecker from '../modules/rulesChecker'
 
 export default class Board extends PureComponent {
   constructor(props) {
@@ -21,13 +23,11 @@ export default class Board extends PureComponent {
 
       dropZone.addEventListener('dragover', (event) => {
         event.preventDefault();
-
         dropZone.classList.add('--dragover')
       });
 
       dropZone.addEventListener('dragleave', (event) => {
         event.preventDefault();
-
         dropZone.classList.remove('--dragover')
       });
 
@@ -35,20 +35,25 @@ export default class Board extends PureComponent {
         event.preventDefault();
 
         if(dropZone.classList.contains('--initial')) {
-          console.log('Initial value')
           dropZone.classList.remove('--dragover')
-        } else {
-          dropZone.innerHTML = event.dataTransfer.getData('text/plain');
+        } else if (event.dataTransfer.getData('text/plain') == 0) {
+          dropZone.classList.add('--zero', 'btn-outline-warning')
+          dropZone.classList.remove('btn-warning')
 
-          if (event.dataTransfer.getData('text/plain') == 0) {
-            dropZone.classList.add('--zero', 'btn-outline-warning');
-            dropZone.classList.remove('btn-warning');
-          } else {
-            dropZone.classList.remove('--zero', 'btn-outline-warning');
-            dropZone.classList.add('btn-warning');
-          }
-          dropZone.classList.remove('--dragover')
+          this.setState({
+            boardLayout: updateSet(this.state.boardLayout, dropZone.id, event.dataTransfer.getData('text/plain'))
+          });
+        } else if (rulesChecker(this.state.boardLayout, event.dataTransfer.getData('text/plain'), dropZone.id)) {
+          dropZone.classList.remove('--zero', 'btn-outline-warning')
+          dropZone.classList.add('btn-warning')
+          dropZone.innerHTML = event.dataTransfer.getData('text/plain')
+
+          this.setState({
+            boardLayout: updateSet(this.state.boardLayout, dropZone.id, event.dataTransfer.getData('text/plain'))
+          });
         }
+
+          dropZone.classList.remove('--dragover')
       });
     });
   };
