@@ -74,12 +74,12 @@ export default function sudokuSets(setNumber) {
           [{ id : 720, value : 9}, { id : 721, value : 3}, { id : 722, value : 8}]],
   
           [[{ id : 800, value : 6}, { id : 801, value : 1}, { id : 802, value : 8}], 
-          [{ id : 810, value : 0}, { id : 811, value : 4}, { id : 812, value : 0}], 
+          [{ id : 810, value : 9}, { id : 811, value : 4}, { id : 812, value : 3}], 
           [{ id : 820, value : 7}, { id : 821, value : 2}, { id : 822, value : 5}]],
   
           [[{ id : 900, value : 3}, { id : 901, value : 9}, { id : 902, value : 7}], 
           [{ id : 910, value : 5}, { id : 911, value : 2}, { id : 912, value : 8}], 
-          [{ id : 920, value : 0}, { id : 921, value : 6}, { id : 922, value : 0}]],
+          [{ id : 920, value : 4}, { id : 921, value : 6}, { id : 922, value : 1}]],
         ]
       )
       break;
