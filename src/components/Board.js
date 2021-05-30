@@ -80,6 +80,8 @@ export default class Board extends PureComponent {
         dropZone.removeEventListener('drop', this.dropEvent)
       })
     }
+
+    this.props.parentCallback("Game finished");
   }
 
   render() {
