@@ -4,8 +4,6 @@ export default function sudokuSets() {
   const urlParams = new URLSearchParams(queryString);
   const setNumber = parseInt(urlParams.get('set'))
 
-  console.log(setNumber);
-
   switch (setNumber) {
     case 0:
       return (

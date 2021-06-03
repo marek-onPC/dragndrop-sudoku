@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={Home} />
-        <Route path="/game" component={Game} />
+        <Route exact path="/" component={ Home } />
+        <Route path="/game" component={ Game } />
       </div>
     </Router>
   );

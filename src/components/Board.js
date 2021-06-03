@@ -73,7 +73,6 @@ export default class Board extends PureComponent {
     const dropZones = document.querySelectorAll('p[draggable="false"]')
 
     if(this.state.gameState === true ) {
-      console.log('true')
       dropZones.forEach(dropZone => {
         dropZone.removeEventListener('dragover', this.dragoverEvent);
         dropZone.removeEventListener('dragleave', this.dragleaveEvent);
@@ -81,7 +80,7 @@ export default class Board extends PureComponent {
       })
     }
 
-    this.props.parentCallback("Game finished");
+    this.props.parentGameStateCheck(true);
   }
 
   render() {
