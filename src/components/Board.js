@@ -9,7 +9,7 @@ export default class Board extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      boardLayout: sudokuSets(1),
+      boardLayout: sudokuSets(),
       gameState: false
     }
   }

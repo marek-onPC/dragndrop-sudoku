@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'ZCOOL KuaiLe', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,6 +10,96 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.home {
+  background-color: #055160;
+  color: #fff;
+
+  .swiper {
+    &-slide {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 25px;
+    }
+  
+    &-button {
+      &-next,
+      &-prev {
+        bottom: 10%;
+        top: auto;
+        color: #fff;
+        transform: scale(0.65);
+        width: 50px;
+
+        @media screen and (min-width: 992px) {
+          transform: scale(1);
+          width: 100px;
+        }
+      }
+    }
+
+    &-pagination-bullet {
+      background: #fff;
+    }
+  }
+}
+
+.intro {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    margin: auto;
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      width: 100%;
+  
+      @media screen and (min-width: 992px) {
+        font-size: 50px;
+        margin-bottom: 25px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      line-height: 25px;
+      font-size: 16px;
+      letter-spacing: 1px;
+  
+      @media screen and (min-width: 992px) {
+        line-height: 35px;
+        font-size: 20px;
+      }
+
+      ul {
+        list-style-type: cjk-ideographic;
+
+        li {
+          padding-left: 25px;
+        }
+      }
+    }
+
+    .btn {
+      width: 31.5px;
+      line-height: 10px;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 2px;
+      border-radius: 2.5px;
+    }
+  }
 }
 
 .game {
