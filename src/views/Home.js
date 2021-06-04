@@ -21,7 +21,7 @@ export default class Home extends PureComponent {
         >
           <SwiperSlide>
             <div className="intro__wrapper">
-              <div>
+              <div className="intro__column">
                 <h2>Follow the Sudoku rules!</h2>
                 <p>
                   In order to win, you need to follow only three basic rules:
@@ -38,11 +38,12 @@ export default class Home extends PureComponent {
                   </ul>
                 </p>
               </div>
+              <img className="intro__column --image" src="/group1.png"/>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="intro__wrapper">
-              <div>
+              <div className="intro__column">
                 <h2>Use the drag'n'drop!</h2>
                 <p>
                   Grab number from the upper CLIPBOARD and drag them into Sudoku board area!
@@ -51,6 +52,7 @@ export default class Home extends PureComponent {
                   Drop the numbers in right place, if you want to erase numbers in board area, just use the empty square from clipboard!
                 </p>
               </div>
+              <img className="intro__column --image" src="/group2.png"/>
             </div>
           </SwiperSlide>
           <SwiperSlide>
