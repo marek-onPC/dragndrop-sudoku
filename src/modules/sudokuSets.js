@@ -1,7 +1,6 @@
-export default function sudokuSets() {
+export default function sudokuSets(location) {
 
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
+  const urlParams = new URLSearchParams(location.search)
   const setNumber = parseInt(urlParams.get('set'))
 
   switch (setNumber) {

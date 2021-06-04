@@ -3,18 +3,19 @@ import Game from './views/Game';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  HashRouter
 } from "react-router-dom";
 
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="App">
         <Route exact path="/" component={ Home } />
         <Route path="/game" component={ Game } />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 

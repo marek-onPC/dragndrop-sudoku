@@ -38,7 +38,7 @@ export default class Home extends PureComponent {
                   </ul>
                 </p>
               </div>
-              <img className="intro__column --image" src="/group1.png"/>
+              <img className="intro__column --image" src="/dragndrop-sudoku/group1.png"/>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -52,7 +52,7 @@ export default class Home extends PureComponent {
                   Drop the numbers in right place, if you want to erase numbers in board area, just use the empty square from clipboard!
                 </p>
               </div>
-              <img className="intro__column --image" src="/group2.png"/>
+              <img className="intro__column --image" src="/dragndrop-sudoku/group2.png"/>
             </div>
           </SwiperSlide>
           <SwiperSlide>

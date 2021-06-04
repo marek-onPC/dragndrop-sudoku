@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react'
+import { withRouter } from "react-router";
 import Number from '../components/Number'
 import sudokuSets from '../modules/sudokuSets'
 import updateSet from '../modules/updateSet'
 import rulesChecker from '../modules/rulesChecker'
 import finishChecker from '../modules/finishChecker'
 
-export default class Board extends PureComponent {
+class Board extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      boardLayout: sudokuSets(),
+      boardLayout: sudokuSets(props.location),
       gameState: false
     }
   }
@@ -100,3 +101,4 @@ export default class Board extends PureComponent {
     )
   }
 }
+export default withRouter(Board)
