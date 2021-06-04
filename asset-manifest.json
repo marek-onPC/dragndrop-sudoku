@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dragndrop-sudoku/static/css/main.45357cba.chunk.css",
+    "main.js": "/dragndrop-sudoku/static/js/main.1f0503f6.chunk.js",
+    "main.js.map": "/dragndrop-sudoku/static/js/main.1f0503f6.chunk.js.map",
+    "runtime-main.js": "/dragndrop-sudoku/static/js/runtime-main.23c8e491.js",
+    "runtime-main.js.map": "/dragndrop-sudoku/static/js/runtime-main.23c8e491.js.map",
+    "static/css/2.7f03534c.chunk.css": "/dragndrop-sudoku/static/css/2.7f03534c.chunk.css",
+    "static/js/2.672350f7.chunk.js": "/dragndrop-sudoku/static/js/2.672350f7.chunk.js",
+    "static/js/2.672350f7.chunk.js.map": "/dragndrop-sudoku/static/js/2.672350f7.chunk.js.map",
+    "index.html": "/dragndrop-sudoku/index.html",
+    "static/css/2.7f03534c.chunk.css.map": "/dragndrop-sudoku/static/css/2.7f03534c.chunk.css.map",
+    "static/css/main.45357cba.chunk.css.map": "/dragndrop-sudoku/static/css/main.45357cba.chunk.css.map",
+    "static/js/2.672350f7.chunk.js.LICENSE.txt": "/dragndrop-sudoku/static/js/2.672350f7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23c8e491.js",
+    "static/css/2.7f03534c.chunk.css",
+    "static/js/2.672350f7.chunk.js",
+    "static/css/main.45357cba.chunk.css",
+    "static/js/main.1f0503f6.chunk.js"
+  ]
+}
